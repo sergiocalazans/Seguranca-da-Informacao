@@ -1,0 +1,12 @@
+{
+    "senhas": {
+        "BOB": "9d42b764e745eee3200f4cd8d518e1a8",
+        "SERGIO": "9b4729dd70b9cb21350b4353fe532fb7",
+        "ALICE": "94cf80a1b22e13d270bf20c00c302626"
+    },
+    "salts": {
+        "BOB": "MsWuS+1KN2/dMimTy5csdA==",
+        "SERGIO": "aNDvdHhTa9iCSx3gzQ0H/A==",
+        "ALICE": "9g+eC4BTa9d27pGOX9ETtw=="
+    }
+}

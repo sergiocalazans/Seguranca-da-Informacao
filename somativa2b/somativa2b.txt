@@ -1,0 +1,61 @@
+ALICE
+
+C:\Users\calaz\Desktop\Seguranca-da-Informacao\somativa2b>python Alice.py
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+ESTA TELA PERTENCE A ALICE
+Aguardando solicitação de LOGIN ...
+RECEBI:  b'HELLO\nSERGIO'
+RECEBI:  b'CHALLENGE_RESPONSE\nz0UJCbUfVRo3lZsGfjHScg==\n0d918294a3fa7fb56753945a8a9134d8'
+ALICE compara local_hash=0d918294a3fa7fb56753945a8a9134d8 e prova_do_bob=0d918294a3fa7fb56753945a8a9134d8
+Este usuário é SERGIO
+Aguardando solicitação de LOGIN ...
+RECEBI:  b'HELLO\nSERGIO'
+RECEBI:  b'CHALLENGE_RESPONSE\nz0UJCbUfVRo3lZsGfjHScg==\n0d918294a3fa7fb56753945a8a9134d8'
+ALICE compara local_hash=bfa8723005e15ad620573930e9c0cc75 e prova_do_bob=0d918294a3fa7fb56753945a8a9134d8
+Ataque detectado: Pedido de LOGIN NEGADO!!!
+Aguardando solicitação de LOGIN ...
+
+CHARLES
+
+C:\Users\calaz\Desktop\Seguranca-da-Informacao\somativa2b>python Charles.py
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+ESTA TELA PERTENCE A CHARLES
+Iniciando escuta ...
+Descobri o Endereço de Bob ('127.0.0.1', 52542)
+ESCUTEI BOB:  ['HELLO', 'SERGIO']
+Descobri o Endereço de Alice ('127.0.0.1', 9999)
+ESCUTEI ALICE:  ['CHALLENGE', 'mSz5AZ1kDkrC4JjnqLqvvQ==', 'aNDvdHhTa9iCSx3gzQ0H/A==']
+ESCUTEI BOB:  ['CHALLENGE_RESPONSE', 'z0UJCbUfVRo3lZsGfjHScg==', '0d918294a3fa7fb56753945a8a9134d8']
+ESCUTEI ALICE:  ['SUCCESS', 'f145a501fc42ca3aea590ad0a2475882']
+ESCUTEI ALICE:  ['HMAC', 'Ola SERGIO, voce esta autenticado na Alice', '5806c3fb8bd9cfd3ddab364c57efbeb4']
+Digite <ENTER> para fazer o REPLAY ATTACK
+Fazendo REPLAY ATTACK contra ALICE
+Enviei:  b'HELLO\nSERGIO'
+Recebi:  ['CHALLENGE', '9kevUmNucSQTw1jbboK/Jg==', 'aNDvdHhTa9iCSx3gzQ0H/A==']
+Enviei:  b'CHALLENGE_RESPONSE\nz0UJCbUfVRo3lZsGfjHScg==\n0d918294a3fa7fb56753945a8a9134d8'
+Recebi:  ['FAILURE', 'SAI FORA, CHARLES ...']
+Aguardando a mensagem:
+A autenticação falhou
+Tentando enviar uma mensagem duplicada para BOB ...
+b'HMAC\nOla SERGIO, voce esta autenticado na Alice\n5806c3fb8bd9cfd3ddab364c57efbeb4'
+Iniciando escuta ...
+
+BOB
+
+C:\Users\calaz\Desktop\Seguranca-da-Informacao\somativa2b>python Bob.py
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+digite seu LOGIN: SERGIO
+digite sua SENHA: PROGRAMADOR
+RECEBI:  b'CHALLENGE\nmSz5AZ1kDkrC4JjnqLqvvQ==\naNDvdHhTa9iCSx3gzQ0H/A=='
+RECEBI:  b'SUCCESS\nf145a501fc42ca3aea590ad0a2475882'
+BOB compara local_hash=f145a501fc42ca3aea590ad0a2475882 e prova_da_Alice=f145a501fc42ca3aea590ad0a2475882
+Este servidor é ALICE
+Aguardando mensagens do Servidor
+RECEBI:  b'HMAC\nOla SERGIO, voce esta autenticado na Alice\n5806c3fb8bd9cfd3ddab364c57efbeb4'
+Mensagem válida
+RECEBI:  b'HMAC\nOla SERGIO, voce esta autenticado na Alice\n5806c3fb8bd9cfd3ddab364c57efbeb4'
+Mensagem válida
+RECEBI:  b'HMAC\nOla SERGIO, voce esta autenticado na Alice\n5806c3fb8bd9cfd3ddab364c57efbeb4'
+Mensagem válida
+RECEBI:  b'HMAC\nOla SERGIO, voce esta autenticado na Alice\n5806c3fb8bd9cfd3ddab364c57efbeb4'
+Mensagem válida
