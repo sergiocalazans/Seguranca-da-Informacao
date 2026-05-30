@@ -5,7 +5,7 @@ SERVER_IP = "127.0.0.1"
 SERVER_PORT = 40232
 MY_CERT = "server.crt"
 MY_KEY = "server.key"
-PEER_CERT = "allclients.crt"
+PEER_CERT = "bcc_CA.crt"
 
  
 

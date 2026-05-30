@@ -1,0 +1,45 @@
+EXERCICIO 1
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe1$ python3 servidor.py
+Servidor TLS aguardando conexões ...
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de Cliente ID1 emitido por Cliente ID1
+O cliente Cliente ID1 encerrou
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de Cliente ID2 emitido por Cliente ID2
+O cliente Cliente ID2 encerrou
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe1$ python3 client.py
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de server.bcc.com emitido por server.bcc.com
+Conectado, enviando dados...
+OLA Cliente ID1 bem vindo ao servidor TLS
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe1$ python3 client2.py
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de server.bcc.com emitido por server.bcc.com
+Conectado, enviando dados...
+OLA Cliente ID2 bem vindo ao servidor TLS
+
+EXERCICIO 2
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe2$ python3 servidor.py
+Servidor TLS aguardando conexões ...
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de Cliente ID1 emitido por BCC Politecnica
+O cliente Cliente ID1 encerrou
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de Cliente ID2 emitido por BCC Politecnica
+O cliente Cliente ID2 encerrou
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe2$ python3 client.py
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de server.bcc.com emitido por BCC Politecnica
+Conectado, enviando dados...
+OLA Cliente ID1 bem vindo ao servidor TLS
+
+calazanssergiohenrique@cloudshell:~/Seguranca-da-Informacao/somativa2c/exe2$ python3 client2.py
+Cipher: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi certificado de server.bcc.com emitido por BCC Politecnica
+Conectado, enviando dados...
+OLA Cliente ID2 bem vindo ao servidor TLS
