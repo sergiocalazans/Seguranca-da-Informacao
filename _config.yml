@@ -1,1 +1,13 @@
+title: Segurança da Informação
+description: Repositório de atividades da disciplina Segurança da Informação
 theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - README.md
